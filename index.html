@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>DrivenEats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="barraTopo">
+      <h1>DrivenEats</h1>
+      <h2>Sua comida em 6 minutos</h2>
+    </div>
+    <div class="containerInterno">
+      <div class="secao Prato">
+        <div class="titulo">
+          <h1>Primeiro, seu prato</h1>
+        </div>
+        <div class="conteudo">
+          <div class="produto Frango" onclick="selecionarPrato('Frango')">
+            <img src="imagens/pf_frango.jpg"/>
+            <h1>Frango Yin Yang</h1>
+            <p>Acompanha salada e farofa da casa</p>
+            <h2>14.90</h2>
+          </div>
+          <div class="produto Carne" onclick="selecionarPrato('Carne')">
+            <img src="imagens/pf_carne.jpg"/>
+            <h1>Carne com Fritas</h1>
+            <p>Acompanha batata, salada e um ovo frito</p>
+            <h2>19.90</h2>
+          </div>
+          <div class="produto Calabresa" onclick="selecionarPrato('Calabresa')">
+            <img src="imagens/pf_calabresa.png"/>
+            <h1>Calabresa</h1>
+            <p>Acompanha batata e cebola caramelizada</p>
+            <h2>14.90</h2>
+          </div>
+        </div>
+      </div>
+      <div class="secao Bebida">
+        <div class="titulo">
+          <h1>Agora, sua bebida</h1>
+        </div>
+        <div class="conteudo">
+          <div class="produto CocaCola" onclick="selecionarBebida('CocaCola')">
+            <img src="imagens/coca.png"/>
+            <h1>Coca-Cola</h1>
+            <p>350 ml</p>
+            <h2>4.90</h2>
+          </div>
+          <div class="produto Fanta" onclick="selecionarBebida('Fanta')">
+            <img src="imagens/fanta.png"/>
+            <h1>Fanta Laranja</h1>
+            <p>350 ml</p>
+            <h2>4.90</h2>
+          </div>
+          <div class="produto Suco" onclick="selecionarBebida('Suco')">
+            <img src="imagens/suco.png"/>
+            <h1>Suco Natural</h1>
+            <p>700 ml</p>
+            <h2>9.90</h2>
+          </div>
+        </div>
+      </div>
+      <div class="secao Sobremesa">
+        <div class="titulo">
+          <h1>Por fim, sua sobremesa</h1>
+        </div>
+        <div class="conteudo">
+          <div class="produto Mouse" onclick="selecionarSobremesa('Mouse')">
+            <img src="imagens/mouse.jpg"/>
+            <h1>Mouse Maracujá</h1>
+            <p>Mouse de leite condensado com maracujá</p>
+            <h2>7.90</h2>
+          </div>
+          <div class="produto Pudim" onclick="selecionarSobremesa('Pudim')">
+            <img src="imagens/pudim.jpg"/>
+            <h1>Pudim Magnífico</h1>
+            <p>Pudim da casa, com calda de laranja</p>
+            <h2>7.90</h2>
+          </div>
+          <div class="produto Brownie" onclick="selecionarSobremesa('Brownie')">
+            <img src="imagens/brownie.jpg"/>
+            <h1>Brownie</h1>
+            <p>Brownie de chocolate suiço 70%</p>
+            <h2>9.90</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="barraInferior">
+      <button class="botaoConfirmar" onclick="finalizarPedido()">Selecione os 3 itens </br> para fechar o pedido</button>
+    </div>
+    <div class="fundoConfirmacao escondido">
+      <div class="janelaConfirmacao">
+        <h2>Confime seu pedido</h2>
+        <div class="escolhas">
+          <p class="escolhaPrato"></p>
+        </br>
+          <p class="escolhaBebida"></p>
+        </br>
+          <p class="escolhaSobremesa"></p>
+        </div>
+        <h1 class="valorTotal"></h1>
+        <a class="confirmar" onclick="enviarPedido()">Tudo certo, pode pedir!</a>
+        <button class="cancelar" onclick="fecharJanela()">Cancelar</button>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
